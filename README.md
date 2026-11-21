@@ -1,4 +1,4 @@
-# Gerenciador de Tarefas em Python. v0.1.0
+# Gerenciador de Tarefas em Python. v0.0.0
 ## Um gerenciador de tarefas em desenvolvimento, agindo ainda em linhas de comando
 ### suas funções são:
 - Adicionar
