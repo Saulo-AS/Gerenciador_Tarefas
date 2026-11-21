@@ -1,5 +1,5 @@
-from functions import AddTask, ListTasks, CompleteTasks, RemoveTasks
-tasks = []
+from functions import AddTask, ListTasks, CompleteTasks, RemoveTasks, LoadTasks
+tasks = LoadTasks()
 while True:
     print("\n1 - Adicionar tarefas")
     print("2 - Listar tarefas")
