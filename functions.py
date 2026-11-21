@@ -12,7 +12,7 @@ def SaveTasks(tasks):
 def AddTask(tasks):
     while True:
         print("Quais tarefas deseja adicionar?\n")
-        add = input(": ").title()
+        add = input(": ").strip().capitalize()
         print("Digite 'Sair' para voltar ao menu\n")
         if add == "Sair":
             break
