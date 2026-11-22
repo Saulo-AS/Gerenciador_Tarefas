@@ -1,4 +1,5 @@
-from functions import AddTask, ListTasks, CompleteTasks, RemoveTasks, LoadTasks
+from src.functions import AddTask, ListTasks, CompleteTasks, RemoveTasks
+from database import LoadTasks
 tasks = LoadTasks()
 while True:
     print("\n1 - Adicionar tarefas")
