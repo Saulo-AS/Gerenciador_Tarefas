@@ -12,12 +12,29 @@ def SaveTasks(tasks):
 def AddTask(tasks):
     while True:
         print("Quais tarefas deseja adicionar?\n")
-        add = input(": ").strip().capitalize()
         print("Digite 'Sair' para voltar ao menu\n")
+        add = input(": ").strip().capitalize()
         if add == "Sair":
             break
-        tasks.append({"title": add, "done": False})
-        SaveTasks(tasks)
+        print("Qual nível de prioridade?")
+        print("1 - Alta")
+        print("2 - Média")
+        print("3 - Baixa")
+        add_priority = input(": ")
+        if add_priority == "1":
+            add_priority = "Alta"
+            tasks.append({"title": add, "done": False, "priority": add_priority})
+            SaveTasks(tasks)
+        elif add_priority == "2":
+            add_priority = "Média"
+            tasks.append({"title": add, "done": False, "priority": add_priority})
+            SaveTasks(tasks)
+        elif add_priority == "3":
+            add_priority = "Baixa"
+            tasks.append({"title": add, "done": False, "priority": add_priority})
+            SaveTasks(tasks)
+        else:
+            print("Valor inexistente!")
 def ListTasks(tasks):
     print("==== SUAS TAREFAS ====")
     if not tasks:
@@ -25,7 +42,8 @@ def ListTasks(tasks):
         return
     for T in range(0, len(tasks)):
         status = "Done" if tasks[T]["done"] else "Pending"
-        print(f"{T + 1} - {tasks[T]['title']} [{status}]")
+        Priority = tasks[T]["priority"] 
+        print(f"{T + 1} - {tasks[T]['title']}| Estado: [{status}] Prioridade: [{Priority}]")
 def CompleteTasks(tasks):
     while True:
         ListTasks(tasks)
